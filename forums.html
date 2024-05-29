@@ -9,7 +9,7 @@
 <body>
     <header>
         <div class="container">
-            <h1><a href="index.html">Etkileşimli Eğitim Platformu</a></h1>
+            <h1><a href="index.html">İnteraktif Eğitim Platformu</a></h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Ana Sayfa</a></li>
@@ -18,31 +18,47 @@
                     <li><a href="projects.html">Grup Projeleri</a></li>
                     <li><a href="live.html">Canlı Dersler</a></li>
                     <li><a href="login.html">Giriş Yap</a></li>
+                    <li><a href="logout.html">Çıkış Yap</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main class="container">
-        <h2>Forumlar</h2>
-        <div class="forum-list">
-            <div class="forum-item">
-                <h3>Web Programlama Forumu</h3>
-                <p>Web programlama teknikleri ve en iyi uygulamalar hakkında tartışmalar.</p>
-                <a href="forum-detail.html" class="btn">Foruma Gir</a>
-            </div>
-            <div class="forum-item">
-                <h3>İngilizce Öğrenme Forumu</h3>
-                <p>İngilizce öğrenme, ipuçları ve faydalı kaynaklar hakkında tartışmalar.</p>
-                <a href="forum-detail.html" class="btn">Foruma Gir</a>
-            </div>
-            <!-- Gerekirse daha fazla forum ekleyin -->
-        </div>
+        <section id="forum-form">
+            <h2>Forum'a Katılın</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="username">Kullanıcı Adı:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="topic">Konu Başlığı:</label>
+                    <input type="text" id="topic" name="topic" required>
+                </div>
+                <div class="form-group">
+                    <label for="discussion-type">Türü Seçin:</label>
+                    <select id="discussion-type" name="discussion-type" required>
+                        <option value="soru">Soru</option>
+                        <option value="tartışma">Tartışma</option>
+                        <option value="bilgi">Bilgi Paylaşımı</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mesajınız:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Gönder</button>
+            </form>
+        </section>
+
+        <!-- اضافة المناقشات أو المواضيع الأخرى هنا -->
+
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Etkileşimli Eğitim Platformu. Tüm hakları saklıdır.</p>
+            <p>&copy; 2024 İnteraktif Eğitim Platformu. Tüm hakları saklıdır.</p>
         </div>
     </footer>
 </body>
