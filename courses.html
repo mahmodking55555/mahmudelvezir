@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kurslar</title>
+    <title>Etkileşimli Eğitim Platformu</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -24,20 +24,31 @@
     </header>
 
     <main class="container">
-        <h2>Kurslar</h2>
-        <div class="course-list">
-            <div class="course-item">
-                <h3>Web Programlama Kursu</h3>
-                <p>HTML, CSS ve JavaScript kullanarak web siteleri oluşturmayı öğrenin.</p>
-                <a href="course-detail.html" class="btn">Daha Fazla</a>
+        <section id="top-box">
+            <div class="content" id="display-content">
+                <img src="programming.jpg" alt="Programlama Kursları" class="top-img">
+                <h3>Programlama Kursları</h3>
+                <p>Programlama dilleri ve yazılım geliştirme konularında kapsamlı kurslar.</p>
+                <button class="confirm-btn">Hizmeti Onayla</button>
             </div>
-            <div class="course-item">
-                <h3>İngilizce Öğrenme Kursu</h3>
-                <p>Başlangıçtan ileri seviyeye kadar İngilizce öğrenin.</p>
-                <a href="course-detail.html" class="btn">Daha Fazla</a>
+        </section>
+        
+        
+
+        <section class="features">
+            <div class="thumbnail" onclick="displayService('programming.jpg', 'Programlama Kursları', 'Programlama dilleri ve yazılım geliştirme konularında kapsamlı kurslar.')">
+                <img src="programming.jpg" alt="Programlama Kursları">
+                <p>Programlama Kursları</p>
             </div>
-            <!-- Gerekirse daha fazla kurs ekleyin -->
-        </div>
+            <div class="thumbnail" onclick="displayService('language.jpg', 'Dil Kursları', 'Farklı dillerde konuşma, yazma ve anlama becerilerini geliştirin.')">
+                <img src="language.jpg" alt="Dil Kursları">
+                <p>Dil Kursları</p>
+            </div>
+            <div class="thumbnail" onclick="displayService('online.jpg', 'Online Dersler', 'Canlı öğretmenlerle etkileşimli online dersler alın.')">
+                <img src="online.jpg" alt="Online Dersler">
+                <p>Online Dersler</p>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -45,6 +56,15 @@
             <p>&copy; 2024 Etkileşimli Eğitim Platformu. Tüm hakları saklıdır.</p>
         </div>
     </footer>
+
+    <script>
+        function displayService(imgSrc, title, description) {
+            document.querySelector('#top-box .top-img').src = imgSrc;
+            document.querySelector('#top-box h3').innerText = title;
+            document.querySelector('#top-box p').innerText = description;
+
+            
+        }
+    </script>
 </body>
 </html>
-
